@@ -1,5 +1,5 @@
 library(sqldf)          #using sqldf package to read filtered data from file
-
+# "../../Data Directory" is my directory to store the data, in order to run the code you have to edit it
 df <- read.csv.sql("../../Data Directory/UCI IHEPC Dataset/household_power_consumption.txt",
                    sql = "select * from file where Date = '1/2/2007' or Date = '2/2/2007'", header = TRUE, sep = ";")
 
